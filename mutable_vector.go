@@ -51,7 +51,7 @@ func (a MutableVector) Magnitude() float64 {
 }
 
 // Magnitude squared of a vector
-func (a Vector) MagnitudeSquared() float64 {
+func (a MutableVector) MagnitudeSquared() float64 {
 	return magnitudeSquared(a)
 }
 
