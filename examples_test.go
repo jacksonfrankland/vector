@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/quartercastle/vector"
+	"github.com/jacksonfrankland/vector"
 )
 
 func Example() {

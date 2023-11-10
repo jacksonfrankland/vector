@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/quartercastle/vector"
+	"github.com/jacksonfrankland/vector"
 )
 
 type vec = vector.Vector
