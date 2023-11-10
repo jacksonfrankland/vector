@@ -1,3 +1,3 @@
-module github.com/quartercastle/vector
+module github.com/jacksonfrankland/vector
 
 go 1.13

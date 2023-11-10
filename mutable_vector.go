@@ -50,6 +50,11 @@ func (a MutableVector) Magnitude() float64 {
 	return magnitude(a)
 }
 
+// Magnitude squared of a vector
+func (a Vector) MagnitudeSquared() float64 {
+	return magnitudeSquared(a)
+}
+
 // Unit returns a direction vector with the length of one.
 func (a MutableVector) Unit() MutableVector {
 	return unit(a)

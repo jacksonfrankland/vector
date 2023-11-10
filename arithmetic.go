@@ -189,6 +189,29 @@ func magnitude(a []float64) float64 {
 	return math.Sqrt(result)
 }
 
+func magnitudeSquared(a []float64) float64 {
+	dim := len(a)
+
+	if dim == 1 {
+		return a[x] * a[x]
+	}
+
+	if dim == 2 {
+		return a[x]*a[x] + a[y]*a[y]
+	}
+
+	if dim == 3 {
+		return a[x]*a[x] + a[y]*a[y] + a[z]*a[z]
+	}
+
+	var result float64
+	for _, scalar := range a {
+		result += scalar * scalar
+	}
+
+	return result
+}
+
 func unit(a []float64) []float64 {
 	dim := len(a)
 
