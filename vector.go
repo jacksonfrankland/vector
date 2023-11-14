@@ -102,6 +102,21 @@ func (a Vector) Angle(axis ...Vector) float64 {
 	return angle(a, as)
 }
 
+// Return a matching vector with the given length
+func (a Vector) ScaleMagnitude(length float64) Vector {
+	return scaleMagnitude(clone(a), length)
+}
+
+// Return a matching vector with the given length reduced to below the given length if needed
+func (a Vector) Clamp(length float64) Vector {
+	return clamp(clone(a), length)
+}
+
+// A version of Clamp that takes a squared length
+func (a Vector) ClampSquared(lengthSquared float64) Vector {
+	return clampSquared(clone(a), lengthSquared)
+}
+
 // X is corresponding to doing a Vector[0] lookup, if index 0 does not exist yet, a
 // 0 will be returned instead
 func (a Vector) X() float64 {

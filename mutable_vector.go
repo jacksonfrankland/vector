@@ -102,6 +102,21 @@ func (a MutableVector) Angle(axis ...Vector) float64 {
 	return angle(a, as)
 }
 
+// Return the vector with the given length
+func (a MutableVector) ScaleMagnitude(length float64) MutableVector {
+	return scaleMagnitude(a, length)
+}
+
+// Return the vector with the it's length reduced to below the given length if needed
+func (a MutableVector) Clamp(length float64) MutableVector {
+	return clamp(a, length)
+}
+
+// A version of Clamp that takes a squared length
+func (a MutableVector) ClampSquared(lengthSquared float64) MutableVector {
+	return clampSquared(a, lengthSquared)
+}
+
 // X is corresponding to doing a MutableVector[0] lookup, if index 0 does not exist yet, a
 // 0 will be returned instead
 func (a MutableVector) X() float64 {

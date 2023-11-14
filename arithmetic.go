@@ -427,3 +427,22 @@ func swizzle(a []float64, indices ...int) ([]float64, error) {
 	}
 
 }
+
+func scaleMagnitude(vector []float64, length float64) []float64 {
+	unit(vector)
+	return scale(vector, length)
+}
+
+func clamp(vector []float64, length float64) []float64 {
+	if magnitudeSquared(vector) < length*length {
+		return vector
+	}
+	return scaleMagnitude(vector, length)
+}
+
+func clampSquared(vector []float64, lengthSquared float64) []float64 {
+	if magnitudeSquared(vector) < lengthSquared {
+		return vector
+	}
+	return scaleMagnitude(vector, math.Sqrt(lengthSquared))
+}
