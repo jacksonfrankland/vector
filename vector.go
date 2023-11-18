@@ -117,6 +117,11 @@ func (a Vector) ClampSquared(lengthSquared float64) Vector {
 	return clampSquared(clone(a), lengthSquared)
 }
 
+// Return a matching vector with the given length given by a projection from "projector"
+func (a Vector) Project(projector []float64) Vector {
+	return project(clone(a), projector)
+}
+
 // X is corresponding to doing a Vector[0] lookup, if index 0 does not exist yet, a
 // 0 will be returned instead
 func (a Vector) X() float64 {

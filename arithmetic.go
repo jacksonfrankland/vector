@@ -446,3 +446,7 @@ func clampSquared(vector []float64, lengthSquared float64) []float64 {
 	}
 	return scaleMagnitude(vector, math.Sqrt(lengthSquared))
 }
+
+func project(vector, projector []float64) []float64 {
+	return scaleMagnitude(vector, dot(unit(vector), projector))
+}

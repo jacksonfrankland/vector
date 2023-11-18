@@ -117,6 +117,11 @@ func (a MutableVector) ClampSquared(lengthSquared float64) MutableVector {
 	return clampSquared(a, lengthSquared)
 }
 
+// Return the vector with the given length given by a projection from "projector"
+func (a MutableVector) Project(projector []float64) MutableVector {
+	return project(a, projector)
+}
+
 // X is corresponding to doing a MutableVector[0] lookup, if index 0 does not exist yet, a
 // 0 will be returned instead
 func (a MutableVector) X() float64 {
